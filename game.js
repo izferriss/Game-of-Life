@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () =>
     const canvas = document.querySelector("#board");
     const ctx = canvas.getContext("2d");
 
-    const GRID_HEIGHT = 750;
+    const GRID_HEIGHT = window.screen.height * .75;
     const GRID_WIDTH = GRID_HEIGHT;
     
     const RES = 5;
