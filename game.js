@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () =>
     const canvas = document.querySelector("#board");
     const ctx = canvas.getContext("2d");
 
-    const GRID_HEIGHT = 800;
+    const GRID_HEIGHT = 600;
     const GRID_WIDTH = GRID_HEIGHT;
     
     const RES = 5;
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () =>
     let grid = createGrid(COL, ROW);
 
     requestAnimationFrame(update);
-	
+
     function update()
 	{
 		grid = nextGen(grid);
