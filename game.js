@@ -16,10 +16,12 @@ document.addEventListener("DOMContentLoaded", () =>
     let grid = createGrid(COL, ROW);
 
     requestAnimationFrame(update);
-    function update() {
-      grid = nextGen(grid);
-      drawGrid(grid, COL, ROW, RES);
-      requestAnimationFrame(update);
+	
+    function update()
+	{
+		grid = nextGen(grid);
+		drawGrid(grid, COL, ROW, RES);
+		requestAnimationFrame(update);
     }
 
     function createGrid(cols, rows)
