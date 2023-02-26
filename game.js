@@ -3,12 +3,13 @@ document.addEventListener("DOMContentLoaded", () =>
     const canvas = document.querySelector("#board");
     const ctx = canvas.getContext("2d");
 
-    const GRID_HEIGHT = 600;
+    const GRID_HEIGHT = 800;
     const GRID_WIDTH = GRID_HEIGHT;
     
     const RES = 5;
     const COL = GRID_WIDTH / RES;
     const ROW = GRID_HEIGHT / RES;
+	const FPS = 12;
 
     canvas.width = GRID_WIDTH;
     canvas.height = GRID_HEIGHT;
@@ -21,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () =>
 	{
 		grid = nextGen(grid);
 		drawGrid(grid, COL, ROW, RES);
-		requestAnimationFrame(update);
+		setTimeout(function(){requestAnimationFrame(update);}, 1000 / FPS);
     }
 
     function createGrid(cols, rows)
